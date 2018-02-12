@@ -1,5 +1,5 @@
 import 'babel-polyfill'
-import qr from 'qrcode-generator'
+import QRious from 'qrious'
 import '../css/bootstrap.min.css'
 import '../css/site.css'
 const warp =  require('./warp.js')
@@ -138,20 +138,27 @@ class Warper {
   }
 
   write_qrs(seed, pub, priv) {
-    let typeNumber = 4
-    let errorLevel = 'H'
-    var pubqr = qr(typeNumber, errorLevel);
-    var privqr = qr(typeNumber, errorLevel);
-    var seedqr = qr(typeNumber, errorLevel);
-    pubqr.addData(pub)
-    privqr.addData(priv)
-    seedqr.addData(seed)
-    pubqr.make()
-    privqr.make()
-    seedqr.make()
-    document.getElementById("public-address-qr").innerHTML = pubqr.createImgTag(8);
-    document.getElementById("private-key-qr").innerHTML = privqr.createImgTag(8);
-    document.getElementById("wallet-seed-qr").innerHTML = privqr.createImgTag(8);
+    const pubqrel = document.getElementById("public-address-qr");
+    const privqrel = document.getElementById("private-key-qr");
+    const seedqrel = document.getElementById("wallet-seed-qr");
+    let pubqr = new QRious({
+      element: pubqrel,
+      value: pub,
+      level: 'H',
+      size: '200'
+    });
+    let privqr = new QRious({
+      element: privqrel,
+      value: priv,
+      level: 'H',
+      size: '200'
+    });
+    let seedqr = new QRious({
+      element: seedqrel,
+      value: seed,
+      level: 'H',
+      size: '200'
+    });
   }
 
   click_submit() {

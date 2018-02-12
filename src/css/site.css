@@ -136,13 +136,16 @@ h1 .second-half {
 .salt-summary {
   text-decoration: underline
 }
-#public-address, #private-key {
+#public-address, #private-key, #wallet-seed {
   cursor:pointer;
-  background-color: #fff
 }
 .col-private-key-qr, #private-key-qr {
   float:right;
   text-align:right;
+}
+.col-wallet-seed-qr, #wallet-seed-qr {
+  float:center;
+  text-align:center;
 }
 
 .form-horizontal .progress-form {
