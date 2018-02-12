@@ -22270,7 +22270,7 @@ module.exports = {
     "url": "git://github.com/termhn/nanowarpwallet"
   },
   "keywords": [
-    "ripple address wallet generator brainwallet scrypt"
+    "nano nanocurrency address wallet generator brainwallet scrypt"
   ],
   "author": "Gray Olson, Max Khron, Chris Coyne",
   "license": "MIT",
@@ -25101,8 +25101,7 @@ $(function () {
       <div class="col col-md-4">
         <h4>What is NanoWarpWallet?</h4>
         <p>
-          NanoWarpWallet is a fork of the original WarpWallet used for making Ripple wallets instead of bitcoin ones. It is a deterministic ripple address generator. You never have to save
-          or store your secret key anywhere. Just pick a really good passphrase - I recommend using Diceware, an online implementation of which <a href="https://www.rempe.us/diceware/">you can find here</a> - and never use it
+          NanoWarpWallet is a fork of the original WarpWallet used for making Nano wallets instead of bitcoin ones. It is a deterministic Nano wallet generator. You never have to save or store your secret key anywhere. Just pick a really good passphrase - I recommend using Diceware, an online implementation of which <a href="https://www.rempe.us/diceware/">you can find here</a> - and never use it
           for anything else.
         </p>
         <p>
@@ -25141,13 +25140,13 @@ $(function () {
       <div id="choosepass" class="col col-md-4">
         <h4>Choosing a Good Passphrase</h4>
         <p>
-          "Brainwallets" are often frowned upon in the cryptocurrency community because the safety of a brainwallet is entirely based on how strong of a passphrase you choose to protect it with, and most times the chosen passphrases are not good. RippleWarpWallet takes steps to minimize this by using large iterations of scrypt and pbkdf2 as well as a salt in order to make brute-forcing much more difficult, but this protection is not fool-proof. A bad passphrase will still put your coins at a large risk of being stolen. So, what constitutes a good passphrase?
+          "Brainwallets" are often frowned upon in the cryptocurrency community because the safety of a brainwallet is entirely based on how strong of a passphrase you choose to protect it with, and most times the chosen passphrases are not good. NanoWarpWallet takes steps to minimize this by using large iterations of scrypt and pbkdf2 as well as a salt in order to make brute-forcing much more difficult, but this protection is not fool-proof. A bad passphrase will still put your coins at a large risk of being stolen. So, what constitutes a good passphrase?
         </p>
         <p>
           If you just want to make a good passphrase and don't want to know why it is a good one, I recommend using <a href="https://www.rempe.us/diceware/">this generator</a>, which is based on the <a href="http://world.std.com/~reinhold/diceware.html">Diceware method</a>. Then, use a <a href="https://en.bitcoin.it/wiki/Brainwallet#Example_Mnemonic_Peg">mnemonic peg system</a> to memorize it easily and reliably. If you do want to know why a random phrase from a book or other similar human-generated passphrases are bad, read on.
         </p>
         <p>
-          The strength of a passphrase is calculated using something called "bits of entropy." This is fancy talk for basically saying a fair coin flip. So, to calculate the total number of possibilities that an attacker would have to try to exhaust every possibility given a passphrase's bits of entropy (also known as the <i>key-space</i>, you do 2<sup>bits</sup>. Going forward, it is good to note that an attacker will, on average, have to go through half of the available key-space to find your passphrase. Modern password-cracking infrastructure from a single private entity has been shown to be able to do ~3.5 million hashes per second (or more with a larger, more expensive rig, as some crypto mining entities surely have access to) on scrypt, and we can assume a nation-state type attacker like the NSA could easily do an order of magnitude or more above this--say, 3.5 trillion hashes per second as a conservative estimate. Therefore, the time in seconds, on average, it would take to crack a RippleWarpWallet by brute force would be 2<sup>bits of entropy</sup> * 0.5 / (hashrate of attacker).
+          The strength of a passphrase is calculated using something called "bits of entropy." This is fancy talk for basically saying a fair coin flip. So, to calculate the total number of possibilities that an attacker would have to try to exhaust every possibility given a passphrase's bits of entropy (also known as the <i>key-space</i>, you do 2<sup>bits</sup>. Going forward, it is good to note that an attacker will, on average, have to go through half of the available key-space to find your passphrase. Modern password-cracking infrastructure from a single private entity has been shown to be able to do ~3.5 million hashes per second (or more with a larger, more expensive rig, as some crypto mining entities surely have access to) on scrypt, and we can assume a nation-state type attacker like the NSA could easily do an order of magnitude or more above this--say, 3.5 trillion hashes per second as a conservative estimate. Therefore, the time in seconds, on average, it would take to crack a NanoWarpWallet by brute force would be 2<sup>bits of entropy</sup> * 0.5 / (hashrate of attacker).
         </p>
         <p>
           The bits of entropy of a piece of a passphrase can therefore be calculated by taking log<sub>2</sub> of the number of possibilites that could exist for that piece. If you take a random single lower-case letter, for example, you have 27 possible choices, and log<sub>2</sub>27 = 4.75 bits of entropy. Bits of entropy of pieces of a passphrase can be added together. Therefore, a passphrase with 8 random lower-case letters has an entropy of ~ 4.75 * 8 = 38 bits of entropy. That would mean the total key-space of the passphrase would be 2<sup>38</sup> = 274,877,906,944. However, if those 8 lower case letters are not actually random and are instead parts of an english word, the entropy of each of those letters because they were not actually generated randomly. Therefore, using a "random phrase" from a book, or a random phrase you invent, is not a very good passphrase. The best way to make a secure and memorable passphrase is to use something like <a href="https://www.rempe.us/diceware/">this passphrase generator</a>, which is based on the <a href="http://world.std.com/~reinhold/diceware.html">Diceware method</a>. Then, use a <a href="https://en.bitcoin.it/wiki/Brainwallet#Example_Mnemonic_Peg">mnemonic peg system</a> to memorize it easily and reliably.
@@ -25157,7 +25156,7 @@ $(function () {
       <div class="col col-md-4">
         <h4>Authors</h4>
         <p>
-          The author of RippleWarpWallet, a fork of the original WarpWallet, is Gray Olson, an artist, photographer, programmer, and overall geek living in Phoenix, AZ. You can see more about her at <a href="https://www.grayolson.me/">grayolson.me</a>
+          The author of NanoWarpWallet, a fork of the original WarpWallet, is Gray Olson, an artist, photographer, programmer, and overall geek living in Phoenix, AZ. You can see more about her at <a href="https://www.grayolson.me/">grayolson.me</a>
         </p><p>
           The authors of the original WarpWallet are <a href="https://twitter.com/maxtaco">Max Krohn</a> and
           <a href="https://twitter.com/malgorithms">Chris Coyne</a>, co-founders
@@ -25165,14 +25164,13 @@ $(function () {
           have a lot of time on our hands. Please follow us on twitter if you care to hear about this kind of thing."
         </p>
         <p>
-          <i>RippleWarpWallet</i> is of course offered without any warranty of any kind;
-          if you lose your ripple due to a bug in this software, your keystrokes being
+          <i>NanoWarpWallet</i> is of course offered without any warranty of any kind;
+          if you lose your Nano due to a bug in this software, your keystrokes being
           recorded on a malware-infested XP rig from 2003, a weak passphrase, or even a typo,
-          I am sorry in the most respectful way, but I cannot help you. Of course if you're messing around with ripple, you
-          know how dangerous it is.
+          I am sorry in the most respectful way, but I cannot help you. Of course if you're messing around with Nano, you know how dangerous it is.
         </p>
         <p>
-          Consider using an air-gapped computer when generating ripple addresses. The nice thing about RippleWarpWallet is you don't have to worry
+          Consider using an air-gapped computer when generating Nano addresses. The nice thing about NanoWarpWallet is you don't have to worry
           about concealing your private key afterwards. Just don't forget your passphrase.
         </p>
 
