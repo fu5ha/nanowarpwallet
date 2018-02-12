@@ -30,7 +30,7 @@
     "url": "git://github.com/termhn/nanowarpwallet"
   },
   "keywords": [
-    "ripple address wallet generator brainwallet scrypt"
+    "nano nanocurrency address wallet generator brainwallet scrypt"
   ],
   "author": "Gray Olson, Max Khron, Chris Coyne",
   "license": "MIT",
