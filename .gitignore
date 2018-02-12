@@ -1,0 +1,10 @@
+*.DS_Store
+*~
+npm-debug.log
+test/gen/py-venv
+test/browser/test.js
+node_modules/
+.vscode/
+.cache/
+build/
+yarn-error.log
