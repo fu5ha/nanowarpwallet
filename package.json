@@ -10,7 +10,6 @@
     "babel-preset-env": "^1.6.1",
     "buffer": "5.0.8",
     "colors": "1.1.2",
-    "iced-coffee-script": "108.0.11",
     "iced-test": "0.0.23",
     "iced-utils": "0.1.26",
     "icsify": "0.7.0",
@@ -18,6 +17,7 @@
     "qrious": "^4.0.2"
   },
   "dependencies": {
+    "iced-coffee-script": "108.0.11",
     "iced-error": "0.0.12",
     "iced-runtime": "1.0.1",
     "babel-runtime": "^6.26.0",
