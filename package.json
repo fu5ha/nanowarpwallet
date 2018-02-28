@@ -1,6 +1,6 @@
 {
   "name": "nanowarpwallet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open Source JavaScript Client-Side Nano Wallet Generator Using scrypt",
   "main": "lib/js/warp.js",
   "devDependencies": {
@@ -43,7 +43,7 @@
     "start": "parcel index.html -d ./build",
     "deploy": "icake deploy",
     "parcel": "parcel build index.html --no-minify --no-cache --public-url ./ --out-dir ./build",
-    "postinstall": "cd node_modules/parcel-bundler && yarn install"
+    "parcelinstall": "cd node_modules/parcel-bundler && yarn install"
   },
   "false": {}
 }
