@@ -1,6 +1,6 @@
 {
   "name": "nanowarpwallet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Open Source JavaScript Client-Side Nano Wallet Generator Using scrypt",
   "main": "lib/js/warp.js",
   "devDependencies": {
