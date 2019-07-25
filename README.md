@@ -1,4 +1,6 @@
 # NanoWarpWallet
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftermhn%2Fnanowarpwallet.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftermhn%2Fnanowarpwallet?ref=badge_shield)
+
 
 A Nano brain wallet generator that uses scrypt.
 
@@ -108,3 +110,7 @@ to build once, or
 $ yarn start
 ```
 to watch for changes and re-build during development.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftermhn%2Fnanowarpwallet.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftermhn%2Fnanowarpwallet?ref=badge_large)
